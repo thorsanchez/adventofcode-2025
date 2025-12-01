@@ -1,0 +1,8 @@
+
+Byrjar í 50
+0-99 hringur
+tekur inn txt skjal með skipanir
+
+"The actual password is the number of times the dial is left pointing at 0 
+after any rotation in the sequence."
+
