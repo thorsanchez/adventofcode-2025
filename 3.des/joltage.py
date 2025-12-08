@@ -1,11 +1,15 @@
 total = 0
-#main
 with open("battery.txt") as b:
     for line in b:
-        #breyta char yfir i int
-        numer = [int(d) for d in line.strip()]
-        #taka tvær stærstu tölur
-        a, b = sorted(numer, reverse=True)[:2]
-        total += a * 10 + b
-        print(a*10 + b, total)
+        digits = [int(d) for d in line.strip()]
+        
+        max_joltage = 0
+        for i in range(len(digits)):
+            for j in range(i+1, len(digits)):
+                candidate = 10 * digits[i] + digits[j]
+                if candidate > max_joltage:
+                    max_joltage = candidate
+        
+        total += max_joltage
+
 print(total)
