@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var fs = require("fs");
 //lesa txt
 var input = fs.readFileSync("input.txt", "utf-8");
-var grid = input.trim().split('/n');
+var grid = input.trim().split('\n');
 //dimensions
 var rows = grid.length;
 var cols = grid[0].length;
@@ -16,8 +16,8 @@ for (var row = 0; row < rows; row++) {
             //tellja alla adjacent
             var adjacentRolls = 0;
             //eru 8 plass sem þarf að kanna
-            for (var dr = -1; dr >= 1; dr++) {
-                for (var dc = -1; dc >= 1; dc++) {
+            for (var dr = -1; dr <= 1; dr++) {
+                for (var dc = -1; dc <= 1; dc++) {
                     //skippa rulluna
                     if (dr === 0 && dc === 0) {
                         continue;

@@ -18,8 +18,8 @@ for (let row = 0; row < rows; row++) {
             //tellja alla adjacent
             let adjacentRolls = 0;
             //eru 8 plass sem þarf að kanna
-            for (let dr=-1; dr >= 1; dr++) {
-                for (let dc=-1; dc >= 1; dc++) {
+            for (let dr=-1; dr <= 1; dr++) {
+                for (let dc=-1; dc <= 1; dc++) {
                     //skippa rulluna
                     if (dr === 0 && dc === 0) {
                         continue;
